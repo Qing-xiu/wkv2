@@ -1,0 +1,10 @@
+
+.slide-in-down-enter,
+.slide-in-down-leave-active {
+  transform: translate3d(0, -100%, 0)
+}
+
+.slide-in-down-enter-active,
+.slide-in-down-leave-active {
+  transition: all .3s;
+}

@@ -1,0 +1,27 @@
+ul, li{
+	list-style-type: none;
+	margin:0px;
+	padding:0px;
+}
+
+html,body{
+	-webkit-tap-highlight-color: transparent;
+}
+
+pre, p{
+	margin: 0px;
+	padding: 0px;
+}
+
+a{
+	text-decoration: none;
+	-webkit-tap-highlight-color:transparent;
+}
+
+input, textarea{
+	outline: none;
+	border:none;
+	padding: 0px;
+	margin: 0px;
+	-webkit-appearance:none;
+}

@@ -1,7 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
-const autoprefixer = require('autoprefixer') 
-
+const autoprefixer = require('autoprefixer')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 module.exports = {
   entry: {
     'main': './src/main'
@@ -19,6 +19,13 @@ module.exports = {
         options: {
           // vue-loader options go here
         }
+      },
+      {
+        test: /\.css$/,
+        loader:  ExtractTextPlugin.extract({
+          fallbackLoader: "style-loader",
+          loader: "css-loader"
+        })
       },
       {
         test: /\.js$/,
@@ -39,27 +46,32 @@ module.exports = {
     ]
   },
   
-  plugins: [new webpack.LoaderOptionsPlugin({
+  plugins: [
+    new webpack.LoaderOptionsPlugin({
       vue: {
-          postcss: [
-              require('postcss-partial-import')({
-                  dirs:['src/css', 'node_modules']
-              }),
-              require('postcss-mixins')(),
-              require('postcss-each')(),
-              require('postcss-simple-vars')(),
-              require('postcss-nested')(),
-              require('postcss-current-selector')(),
-              require('postcss-conditionals')(),
-              autoprefixer({ browsers: ['last 8 versions'] })
-          ]
+        postcss: [
+          require('postcss-partial-import')({
+            dirs:['src/css', 'node_modules']
+          }),
+          require('postcss-mixins')(),
+          require('postcss-each')(),
+          require('postcss-simple-vars')(),
+          require('postcss-nested')(),
+          require('postcss-current-selector')(),
+          require('postcss-conditionals')(),
+          require('postcss-px2rem')({remUnit: 75}),
+          autoprefixer({ browsers: ['last 8 versions'] })
+        ]
       }
-  })],
+    }),
+    new ExtractTextPlugin('style.css')
+  ],
 
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.common.js'
-    }
+    },
+    modules: [path.resolve('./src/'), 'node_modules']
   },
   devServer: {
     historyApiFallback: true,

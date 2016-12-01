@@ -1,0 +1,14 @@
+html, body, .page {
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.page{
+  position: absolute;
+  z-index: 2;
+  left:0px;
+  top:0px;
+  right:0px;
+  bottom:0px;
+}
