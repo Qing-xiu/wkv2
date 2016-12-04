@@ -2,6 +2,7 @@ html, body, .page {
   height: 100%;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+
 }
 
 .page{
@@ -11,4 +12,5 @@ html, body, .page {
   top:0px;
   right:0px;
   bottom:0px;
+  background: #f6f6f6;
 }

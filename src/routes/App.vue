@@ -1,21 +1,60 @@
 <template>
-  <transition name="fade">
-    <div class="page" id="app">
-      <img src="../img/logo.png">
-      <h1>{{ msg }}</h1>
-      <div @click="showMask" class="demo">
-        文字大小测试
-      </div>
-      <router-link to="/product/123">
-        info
-      </router-link>
-    </div>
-  </transition>
+    <transition name="fade">
+        <section class="page index-page" id="app">
+            <div class="card">
+                <a class="card-img">
+                    <img src="http://wdwd-prod.wdwdcdn.com/5530f1913265e.jpg" class="img" alt="">
+                </a>
+                <a class="card-title">澳大利亚进口蜂蜜</a>
+                <div class="card-cell">
+                    <a class="cell-hd">
+                        <wk-progress :value="30" :max="150"></wk-progress>
+                    </a>
+                    <div class="cell-ft">
+                        <btn type="primary" size="secondary">立即参与</btn>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <a class="card-img">
+                    <img src="http://wdwd-prod.wdwdcdn.com/5530f1913265e.jpg" class="img" alt="">
+                </a>
+                <a class="card-title">澳大利亚进口蜂蜜</a>
+                <div class="card-cell">
+                    <a class="cell-hd">
+                        <wk-progress :value="30" :max="150"></wk-progress>
+                    </a>
+                    <div class="cell-ft">
+                        <btn type="primary" size="secondary">立即参与</btn>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <a class="card-img">
+                    <img src="http://wdwd-prod.wdwdcdn.com/5530f1913265e.jpg" class="img" alt="">
+                </a>
+                <a class="card-title">澳大利亚进口蜂蜜</a>
+                <div class="card-cell">
+                    <a class="cell-hd">
+                        <wk-progress :value="30" :max="150"></wk-progress>
+                    </a>
+                    <div class="cell-ft">
+                        <btn type="primary" size="secondary">立即参与</btn>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </transition>
 </template>
 
 <script>
 import Mask from 'components/mask'
 import Tips from 'components/tips'
+import Btn from 'components/btn/index.vue'
+import WkProgress from 'components/progress/index.vue'
+
 
 export default {
   name: 'app',
@@ -28,6 +67,10 @@ export default {
     showMask () {
       Tips('请输入密码')
     }
+  },
+  components: {
+    Btn,
+    WkProgress
   }
 }
 </script>
@@ -37,37 +80,34 @@ export default {
 @import "reset.css";
 @import "vars.css";
 
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-
-.demo{
-  width: 750px;
-  height: 100px;
-  background: #ccc;
-  @add-mixin font-dpr 40px;
-}
-
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
+.index-page{
+    .card{
+        background: #fff;
+        padding: 0 30px 25px 30px;
+        margin-bottom: 15px;
+    }
+    .card-img{
+        font-size: 0px;
+        text-align: center;
+        .img{
+            max-width: 100%;
+        }
+    }
+    .card-title{
+        font-size: 34px;
+        color: #373737;
+    }
+    .card-cell{
+        display: flex;
+        align-items:center;
+        margin-top: 20px;
+    }
+    .cell-hd{
+        flex:1;
+        margin-right: 48px;
+    }
+    .cell-ft{
+        width: 200px;
+    }
 }
 </style>
