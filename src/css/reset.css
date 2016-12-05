@@ -1,3 +1,4 @@
+
 ul, li{
 	list-style-type: none;
 	margin:0px;
@@ -6,6 +7,7 @@ ul, li{
 
 html,body{
 	-webkit-tap-highlight-color: transparent;
+	margin: 0px;
 }
 
 pre, p{

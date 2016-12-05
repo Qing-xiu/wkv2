@@ -1,3 +1,5 @@
+$color_primary: #ff9359;
+
 @define-mixin font-dpr $size {
   [data-dpr="1"] & {
     font-size: $size / 2
