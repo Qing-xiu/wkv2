@@ -35,6 +35,8 @@ export default {
 }
 </script>
 
+
+
 <style>
     @import "vars.css";
     @import "animate/slide_in_left.css";
