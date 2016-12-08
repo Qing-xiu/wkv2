@@ -3,74 +3,14 @@
         <section class="page index-page">
             <div class="content">
                 <div class="card">
-                    <a class="card-img">
+                    <router-link to="/product/123" class="card-img">
                         <img src="http://wdwd-prod.wdwdcdn.com/5530f1913265e.jpg" class="img" alt="">
-                    </a>
-                    <a class="card-title">澳大利亚进口蜂蜜</a>
+                    </router-link>
+                    <router-link to="/product/123" class="card-title">澳大利亚进口蜂蜜</router-link>
                     <div class="card-cell">
-                        <a class="cell-hd">
+                        <router-link to="/product/123" class="cell-hd">
                             <wk-progress :value="30" :max="150"></wk-progress>
-                        </a>
-                        <div class="cell-ft">
-                            <btn type="primary" size="secondary">立即参与</btn>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <a class="card-img">
-                        <img src="http://wdwd-prod.wdwdcdn.com/5530f1913265e.jpg" class="img" alt="">
-                    </a>
-                    <a class="card-title">澳大利亚进口蜂蜜</a>
-                    <div class="card-cell">
-                        <a class="cell-hd">
-                            <wk-progress :value="30" :max="150"></wk-progress>
-                        </a>
-                        <div class="cell-ft">
-                            <btn type="primary" size="secondary">立即参与</btn>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <a class="card-img">
-                        <img src="http://wdwd-prod.wdwdcdn.com/5530f1913265e.jpg" class="img" alt="">
-                    </a>
-                    <a class="card-title">澳大利亚进口蜂蜜</a>
-                    <div class="card-cell">
-                        <a class="cell-hd">
-                            <wk-progress :value="30" :max="150"></wk-progress>
-                        </a>
-                        <div class="cell-ft">
-                            <btn type="primary" size="secondary">立即参与</btn>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <a class="card-img">
-                        <img src="http://wdwd-prod.wdwdcdn.com/5530f1913265e.jpg" class="img" alt="">
-                    </a>
-                    <a class="card-title">澳大利亚进口蜂蜜</a>
-                    <div class="card-cell">
-                        <a class="cell-hd">
-                            <wk-progress :value="30" :max="150"></wk-progress>
-                        </a>
-                        <div class="cell-ft">
-                            <btn type="primary" size="secondary">立即参与</btn>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <a class="card-img">
-                        <img src="http://wdwd-prod.wdwdcdn.com/5530f1913265e.jpg" class="img" alt="">
-                    </a>
-                    <a class="card-title">澳大利亚进口蜂蜜</a>
-                    <div class="card-cell">
-                        <a class="cell-hd">
-                            <wk-progress :value="30" :max="150"></wk-progress>
-                        </a>
+                        </router-link>
                         <div class="cell-ft">
                             <btn type="primary" size="secondary">立即参与</btn>
                         </div>
